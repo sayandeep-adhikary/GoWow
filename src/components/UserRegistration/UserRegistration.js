@@ -70,7 +70,7 @@ export default function UserRegistration() {
                     Password
                   </FormLabel>
                   <InputGroup>
-                    <Input type={showPassword ? "text" : "password"} />
+                    <Input type={showPassword ? "text" : "password"} placeholder="********"/>
                     <InputRightElement h={"full"}>
                       <Button
                         variant={"ghost"}

@@ -59,19 +59,25 @@ export default function Login() {
               <Input type="password" placeholder="*******" />
             </FormControl>
             <Stack spacing={2}>
-              <Button
-                type="submit"
-                bg={"color.1"}
-                color={"white"}
-                _hover={{
-                  color: "color.1",
-                  bg: "white",
-                }}
-                style={{ letterSpacing: "1px" }}
-                className={styles.loginBtn}
+              <Link
+                to="/home"
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                Log in
-              </Button>
+                <Button
+                  type="submit"
+                  bg={"color.1"}
+                  color={"white"}
+                  _hover={{
+                    color: "color.1",
+                    bg: "white",
+                  }}
+                  style={{ letterSpacing: "1px" }}
+                  className={styles.loginBtn}
+                  minW={'100%'}
+                >
+                  Log in
+                </Button>
+              </Link>
               <a
                 href="https://varlyq.com"
                 target="_blank"
