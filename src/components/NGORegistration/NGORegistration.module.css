@@ -1,0 +1,24 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.crossIcon {
+    position: absolute;
+    right: 0;
+}
+.createBtn:hover {
+    border: 1px solid #5B4899;
+}
+.downloadBtn:hover {
+    border: 1px solid #5B4899 !important;
+}
+.shareBtn {
+    border: 1px solid #5B4899 !important;
+}
+@media (width > 500px){
+    .hedingText {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,13 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.crossIcon {
+    position: absolute;
+    right: 0;
+}
+.createBtn:hover {
+    border: 1px solid #5B4899;
+}

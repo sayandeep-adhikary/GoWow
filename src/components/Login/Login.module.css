@@ -1,0 +1,25 @@
+.loginBtn:hover {
+    border: 1px solid #5B4899;
+}
+.forgotPass:hover {
+    text-decoration: none;
+}
+.outlineBtn {
+    border: 1px solid #5B4899 !important;
+}
+.modalItem {
+    background-color: #F7F6FD;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.modalItem:hover {
+    background-color: #e9e5ff;
+    box-shadow: 0 0 50px #d2d2d2 !important;
+}
+.modalIcon {
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    border-radius: 50%;
+}
