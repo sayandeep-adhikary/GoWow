@@ -20,11 +20,33 @@ export default function Opportunities() {
       </Flex>
       <Box py="40">
         <Flex alignItems={"end"} justifyContent={"space-between"} px={20}>
-          <Text mb={0} fontFamily={"'Poppins', sans-serif"} fontSize={'2rem'} style={{borderBottom: '3px solid #5B4899'}}>
+          <Text
+            mb={0}
+            fontFamily={"'Poppins', sans-serif"}
+            fontSize={"2rem"}
+            style={{ borderBottom: "3px solid #5B4899" }}
+          >
             Opportunities
           </Text>
-          <Button borderRadius={"10px"} bg={"color.1"} color={"white"} w={125}>
-            <Text fontFamily={"'Poppins', sans-serif"} mb={0}>View All</Text>
+          <Button
+            borderRadius={"10px"}
+            bg={"color.1"}
+            color={"white"}
+            w={125}
+            _hover={{
+              bg: "white",
+              border: "1px solid #5B4899",
+              color: "#5B4899",
+            }}
+          >
+            <Text
+              fontFamily={"'Poppins', sans-serif"}
+              mb={0}
+              letterSpacing={"1px"}
+              fontWeight={400}
+            >
+              View All
+            </Text>
           </Button>
         </Flex>
       </Box>
