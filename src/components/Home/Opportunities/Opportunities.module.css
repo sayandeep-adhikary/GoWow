@@ -3,3 +3,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.modalIcon {
+  height: 50px;
+  width: 50px;
+  background-color: #F7F6FD;
+  padding: 10px;
+  border-radius: 50%;
+}

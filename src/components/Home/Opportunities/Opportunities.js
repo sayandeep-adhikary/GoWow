@@ -5,6 +5,9 @@ import Card from "./Card/Card";
 import userIcon from "../../../assets/userIcon.png";
 import NGOIcon from "../../../assets/donateIcon.png";
 import businessIcon from "../../../assets/businessIcon.png";
+import { BsHeartPulse } from "react-icons/bs";
+import { PiGraduationCap } from "react-icons/pi";
+import { GoPeople } from "react-icons/go";
 
 export default function Opportunities() {
   return (
@@ -18,7 +21,7 @@ export default function Opportunities() {
         <Card icon={NGOIcon} count={324} text={"NGOs"} />
         <Card icon={businessIcon} count={324} text={"Businesses"} />
       </Flex>
-      <Box py="40">
+      <Box pt="40">
         <Flex alignItems={"end"} justifyContent={"space-between"} px={20}>
           <Text
             mb={0}
@@ -48,6 +51,61 @@ export default function Opportunities() {
               View All
             </Text>
           </Button>
+        </Flex>
+      </Box>
+      <Box>
+        <Flex justifyContent={'space-evenly'} alignItems={'center'} py={20}>
+          <div
+            className="card"
+            style={{
+              width: "15rem",
+              cursor: "pointer",
+              border: '1px solid #5B4899'
+            }}
+          >
+            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+              <Box className={styles.modalIcon}>
+                <BsHeartPulse color="#5B4899" size={30}/>
+              </Box>
+              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+                {"Life Saving"}
+              </Text>
+            </Flex>
+          </div>
+          <div
+            className="card"
+            style={{
+              width: "15rem",
+              cursor: "pointer",
+              border: '1px solid #5B4899'
+            }}
+          >
+            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+              <Box className={styles.modalIcon}>
+                <PiGraduationCap color="#5B4899" size={30}/>
+              </Box>
+              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+                {"Material"}
+              </Text>
+            </Flex>
+          </div>
+          <div
+            className="card"
+            style={{
+              width: "15rem",
+              cursor: "pointer",
+              border: '1px solid #5B4899'
+            }}
+          >
+            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+              <Box className={styles.modalIcon}>
+                <GoPeople color="#5B4899" size={30}/>
+              </Box>
+              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+                {"Volunteers"}
+              </Text>
+            </Flex>
+          </div>
         </Flex>
       </Box>
     </Box>
