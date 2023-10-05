@@ -1,0 +1,7 @@
+.headerContainer {
+    background: url('../../../assets/HeaderImg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}

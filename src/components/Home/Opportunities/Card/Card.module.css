@@ -1,0 +1,8 @@
+.modalIcon {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    border-radius: 50%;
+}
