@@ -4,7 +4,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 
 export default function Card({ icon, count, text }) {
   return (
-    <div className="card text-center mx-2" style={{ width: "11rem", borderRadius: '15px' }}>
+    <div className="card text-center mx-2" style={{ width: "11rem", borderRadius: '15px', borderColor: '#5B4899' }}>
       <Box className={styles.modalIcon} mx={'auto'} mt={4}>
         <Image src={icon} alt="user icon" w={30} />
       </Box>
