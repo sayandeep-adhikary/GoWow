@@ -5,7 +5,7 @@ import { Box, Text } from '@chakra-ui/react'
 export default function CalendarView() {
   return (
     <Box>
-      <Text>Calendar View</Text>
+      <Text textAlign={'center'}>Calendar View</Text>
     </Box>
   )
 }

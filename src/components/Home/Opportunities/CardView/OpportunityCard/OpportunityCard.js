@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import styles from "./OpportunityCard.module.css";
+import React from "react";
+// import styles from "./OpportunityCard.module.css";
 import {
-  Avatar,
   Box,
   Button,
   Card,
