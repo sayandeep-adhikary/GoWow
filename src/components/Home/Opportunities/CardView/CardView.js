@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CardView.module.css";
 import { Box, Text } from "@chakra-ui/react";
-import OpportunityCard from "../OpportunityCard/OpportunityCard";
+import OpportunityCard from "./OpportunityCard/OpportunityCard";
 
 export default function CardView() {
   return (

@@ -15,8 +15,8 @@ import {
 } from "@chakra-ui/react";
 import { SlLike } from "react-icons/sl";
 import { BsChat } from "react-icons/bs";
-import NGOLogo from "../../../../assets/NGOLogo.png";
-import opportunityImg from "../../../../assets/opportunityImg.png";
+import NGOLogo from "../../../../../assets/NGOLogo.png";
+import opportunityImg from "../../../../../assets/opportunityImg.png";
 
 export default function OpportunityCard() {
   return (
