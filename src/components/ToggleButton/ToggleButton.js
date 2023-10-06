@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import styles from "./ToggleButton.module.css";
 import { Button, ButtonGroup, Flex, Text } from "@chakra-ui/react";
-import { FaUniversity } from "react-icons/fa";
-import { BsFillBookmarkFill } from "react-icons/bs";
 
 export default function ToggleButton(props) {
-  const [button, setButton] = useState("following");
+  const [button, setButton] = useState("card");
   const handleBtn = (e) => {
     setButton(e.currentTarget.id);
   };
   const activeBtn = (button) =>{
     let left = "";
     switch (button) {
-        case "following":
+        case "card":
             left = "0";
             break;
-        case "bookmarks":
+        case "calendar":
             left = "10rem";
             break;
         default:
@@ -40,13 +38,13 @@ export default function ToggleButton(props) {
         <Button
           onClick={(e) => {
             handleBtn(e);
-            // props.setShowView('following');
+            props.setShowView('card');
           }}
           bg={"transparent"}
           size={"sm"}
           className={styles.rightBtn}
-          id="following"
-          color={button === "following" ? "white" : "#5F5F5F"}
+          id="card"
+          color={button === "card" ? "white" : "#5F5F5F"}
           py={6}
           px={4}
           h={'2rem'}
@@ -58,14 +56,14 @@ export default function ToggleButton(props) {
         <Button
           onClick={(e) => {
             handleBtn(e);
-            // props.setShowView('bookmarks');
+            props.setShowView('calendar');
           }}
           bg={"transparent"}
           aria-label="Add to friends"
           size={"sm"}
           className={styles.rightBtn}
-          id="bookmarks"
-          color={button === "bookmarks" ? "white" : "#5F5F5F"}
+          id="calendar"
+          color={button === "calendar" ? "white" : "#5F5F5F"}
           py={6}
           px={4}
           h={'2rem'}

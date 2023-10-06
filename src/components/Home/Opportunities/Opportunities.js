@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Opportunities.module.css";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Card from "./Card/Card";
@@ -9,8 +9,11 @@ import { BsHeartPulse } from "react-icons/bs";
 import { PiGraduationCap } from "react-icons/pi";
 import { GoPeople } from "react-icons/go";
 import ToggleButton from "../../ToggleButton/ToggleButton";
+import CardView from "./CardView/CardView";
+import CalendarView from "./CalendarView/CalendarView";
 
 export default function Opportunities() {
+  const [showView, setShowView]= useState('card')
   return (
     <Box pos={"relative"} bg={'#F7F6FD'}>
       <Flex
@@ -56,12 +59,16 @@ export default function Opportunities() {
       </Box>
       <Box>
         <Flex justifyContent={'space-evenly'} alignItems={'center'} py={20}>
-          <div
+          <Box
             className="card"
             style={{
               width: "15rem",
               cursor: "pointer",
               border: '1px solid #5B4899'
+            }}
+            _hover={{
+              bg: 'color.1',
+              color: 'white',
             }}
           >
             <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
@@ -72,13 +79,17 @@ export default function Opportunities() {
                 {"Life Saving"}
               </Text>
             </Flex>
-          </div>
-          <div
+          </Box>
+          <Box
             className="card"
             style={{
               width: "15rem",
               cursor: "pointer",
               border: '1px solid #5B4899'
+            }}
+            _hover={{
+              bg: 'color.1',
+              color: 'white',
             }}
           >
             <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
@@ -89,13 +100,17 @@ export default function Opportunities() {
                 {"Material"}
               </Text>
             </Flex>
-          </div>
-          <div
+          </Box>
+          <Box
             className="card"
             style={{
               width: "15rem",
               cursor: "pointer",
               border: '1px solid #5B4899'
+            }}
+            _hover={{
+              bg: 'color.1',
+              color: 'white',
             }}
           >
             <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
@@ -106,10 +121,11 @@ export default function Opportunities() {
                 {"Volunteers"}
               </Text>
             </Flex>
-          </div>
+          </Box>
         </Flex>
       </Box>
-      <ToggleButton/>
+      <ToggleButton setShowView={setShowView}/>
+      {showView === 'card' ? <CardView/> : <CalendarView/>}
     </Box>
   );
 }
