@@ -8,10 +8,11 @@ import businessIcon from "../../../assets/businessIcon.png";
 import { BsHeartPulse } from "react-icons/bs";
 import { PiGraduationCap } from "react-icons/pi";
 import { GoPeople } from "react-icons/go";
+import ToggleButton from "../../ToggleButton/ToggleButton";
 
 export default function Opportunities() {
   return (
-    <Box pos={"relative"}>
+    <Box pos={"relative"} bg={'#F7F6FD'}>
       <Flex
         justifyContent={"center"}
         pos={"absolute"}
@@ -108,6 +109,7 @@ export default function Opportunities() {
           </div>
         </Flex>
       </Box>
+      <ToggleButton/>
     </Box>
   );
 }
