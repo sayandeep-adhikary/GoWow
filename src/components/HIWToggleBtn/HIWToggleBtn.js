@@ -1,20 +1,23 @@
 import React, { useState } from "react";
-import styles from "./ToggleButton.module.css";
+import styles from "./HIWToggleBtn.module.css";
 import { Button, ButtonGroup, Flex, Text } from "@chakra-ui/react";
 
-export default function ToggleButton(props) {
-  const [button, setButton] = useState("card");
+export default function HIWToggleBtn(props) {
+  const [button, setButton] = useState("donors");
   const handleBtn = (e) => {
     setButton(e.currentTarget.id);
   };
   const activeBtn = (button) =>{
     let left = "";
     switch (button) {
-        case "card":
+        case "donors":
             left = "0";
             break;
-        case "calendar":
+        case "ngo":
             left = "10rem";
+            break;
+        case "business":
+            left = "20rem";
             break;
         default:
             left = "0";
@@ -38,38 +41,56 @@ export default function ToggleButton(props) {
         <Button
           onClick={(e) => {
             handleBtn(e);
-            props.setShowView('card');
+            props.setShowView('donors');
           }}
           bg={"transparent"}
           size={"sm"}
           className={styles.rightBtn}
-          id="card"
-          color={button === "card" ? "white" : "#5F5F5F"}
+          id="donors"
+          color={button === "donors" ? "white" : "#5F5F5F"}
           py={6}
           px={4}
           h={'2rem'}
           w={'10rem'}
 
         >
-          <Text mb={0}>Cards View</Text>
+          <Text mb={0}>Donors</Text>
         </Button>
         <Button
           onClick={(e) => {
             handleBtn(e);
-            props.setShowView('calendar');
+            props.setShowView('ngo');
           }}
           bg={"transparent"}
           aria-label="Add to friends"
           size={"sm"}
           className={styles.rightBtn}
-          id="calendar"
-          color={button === "calendar" ? "white" : "#5F5F5F"}
+          id="ngo"
+          color={button === "ngo" ? "white" : "#5F5F5F"}
           py={6}
           px={4}
           h={'2rem'}
           w={'10rem'}
         >
-          <Text mb={0}>Calendar View</Text>
+          <Text mb={0}>Ngos</Text>
+        </Button>
+        <Button
+          onClick={(e) => {
+            handleBtn(e);
+            props.setShowView('business');
+          }}
+          bg={"transparent"}
+          aria-label="Add to friends"
+          size={"sm"}
+          className={styles.rightBtn}
+          id="business"
+          color={button === "business" ? "white" : "#5F5F5F"}
+          py={6}
+          px={4}
+          h={'2rem'}
+          w={'10rem'}
+        >
+          <Text mb={0}>Businesses</Text>
         </Button>
       </ButtonGroup>
     </Flex>

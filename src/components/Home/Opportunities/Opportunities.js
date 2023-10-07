@@ -126,7 +126,7 @@ export default function Opportunities() {
       </Box>
       <ToggleButton setShowView={setShowView}/>
       {showView === 'card' ? <CardView/> : <CalendarView/>}
-      <Text textAlign={"center"} color={'color.1'} my={5} fontWeight={600} letterSpacing={'1px'} cursor={'pointer'}>See More</Text>
+      <Text textAlign={"center"} color={'color.1'} py={5} mb={0} fontWeight={600} letterSpacing={'1px'} cursor={'pointer'}>See More</Text>
     </Box>
   );
 }
