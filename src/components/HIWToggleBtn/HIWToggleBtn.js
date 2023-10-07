@@ -26,7 +26,7 @@ export default function HIWToggleBtn(props) {
     return left;
   }
   return (
-    <Flex mb={"2rem"} pl={20} alignItems={"center"} justifyContent={"start"}>
+    <Flex pl={20} alignItems={"center"} justifyContent={"start"}>
       <ButtonGroup
         isAttached
         variant="outline"

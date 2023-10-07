@@ -2,3 +2,8 @@
     color: inherit;
     background: none !important;
 }
+.linkItem {
+    color: inherit !important;
+    text-decoration: none !important;
+    background: none !important;
+}

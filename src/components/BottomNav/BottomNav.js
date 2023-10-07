@@ -11,35 +11,38 @@ import {
 } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styles from "./BottomNav.module.css";
+import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
-const Links = [
-  "Home",
-  "About Us",
-  "NGO",
-  "Get Wow",
-  "Be Wow",
-  "Testimonials",
-  "Gallery",
-];
+const Links = ["Home", "About Us", "NGO", "Get Wow", "Be Wow"];
 
-const NavLink = (props) => {
+const NavLinks = (props) => {
   const { children } = props;
-
+  const getDomain = (str) => {
+    let ans = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== " ") {
+        ans += str[i];
+      }
+    }
+    return ans.toLowerCase();
+  };
   return (
-    <Box
-      as="a"
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-      href={"#"}
-      className={styles.navItems}
-    >
-      {children}
-    </Box>
+    <NavLink className={styles.linkItem} to={`/${getDomain(children)}`}>
+      <Box
+        px={2}
+        py={"0.8rem"}
+        rounded={"md"}
+        _hover={{
+          textDecoration: "none",
+          bg: useColorModeValue("gray.200", "gray.700"),
+        }}
+        className={styles.navItems}
+        id={children}
+      >
+        {children}
+      </Box>
+    </NavLink>
   );
 };
 
@@ -52,12 +55,51 @@ export default function BottomNav() {
             <HStack
               as={"nav"}
               spacing={10}
-              display={{ base: "none", md: "flex" }}
+              display={"flex"}
               letterSpacing={"1px"}
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLinks key={link}>{link}</NavLinks>
               ))}
+              <NavHashLink
+                className={styles.linkItem}
+                to="/home#testimonial"
+                // activeStyle={{ borderBottom: "5px solid white !important" }}
+              >
+                <Box
+                  px={2}
+                  py={"0.8rem"}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: useColorModeValue("white", "gray.700"),
+                  }}
+                  className={styles.navItems}
+                  id={"testimonials"}
+                >
+                  Testimonials
+                </Box>
+              </NavHashLink>
+              <NavHashLink
+                className={styles.linkItem}
+                to="/home#gallery"
+                // activeStyle={{ borderBottom: "5px solid white !important" }}
+              >
+                <Box
+                  px={2}
+                  py={"0.8rem"}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: useColorModeValue("white", "gray.700"),
+                  }}
+                  href={"#gallery"}
+                  className={styles.navItems}
+                  id={"testimonials"}
+                >
+                  Gallery
+                </Box>
+              </NavHashLink>
             </HStack>
             <Flex>
               <Menu>

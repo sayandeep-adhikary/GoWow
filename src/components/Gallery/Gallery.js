@@ -15,7 +15,7 @@ import gallery3 from "../../assets/gallery3.png";
 
 export default function Gallery() {
   return (
-    <Box bg={"#F7F6FD"}>
+    <Box bg={"#F7F6FD"} id="gallery">
       <Flex alignItems={"end"} justifyContent={"space-between"} px={20} pb={10}>
         <Text
           mb={0}
