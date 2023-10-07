@@ -7,7 +7,7 @@ import Carousel from "./Carousel/Carousel";
 export default function Testimonials() {
   const [showView, setShowView] = useState("donors");
   return (
-    <Box>
+    <Box backgroundColor={'#F7F6FD'}>
       <Flex alignItems={"end"} justifyContent={"space-between"} px={20}>
         <Text
           mb={0}

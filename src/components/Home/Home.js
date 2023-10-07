@@ -7,6 +7,7 @@ import Opportunities from "./Opportunities/Opportunities";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import Gallery from "../Gallery/Gallery";
 import Testimonials from "./Testimonials/Testimonials";
+import Downloads from "./Downloads/Downloads";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HowItWorks/>
       <Gallery/>
       <Testimonials/>
+      <Downloads/>
     </>
   );
 }
