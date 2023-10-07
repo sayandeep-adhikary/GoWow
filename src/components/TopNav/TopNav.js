@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 export default function TopNav() {
   return (
     <>
-      <Box bg={useColorModeValue("white", "white")} px={20} pt={2}>
+      <Box bg={useColorModeValue("white", "white")} px={20} pt={2} id="topnav">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Link to={"/home"}>

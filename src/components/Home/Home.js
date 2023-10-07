@@ -8,6 +8,7 @@ import HowItWorks from "../HowItWorks/HowItWorks";
 import Gallery from "../Gallery/Gallery";
 import Testimonials from "./Testimonials/Testimonials";
 import Downloads from "./Downloads/Downloads";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Gallery/>
       <Testimonials/>
       <Downloads/>
+      <Footer/>
     </>
   );
 }
