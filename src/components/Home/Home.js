@@ -5,6 +5,7 @@ import BottomNav from "../BottomNav/BottomNav";
 import Header from "./Header/Header";
 import Opportunities from "./Opportunities/Opportunities";
 import HowItWorks from "../HowItWorks/HowItWorks";
+import Gallery from "../Gallery/Gallery";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header/>
       <Opportunities/>
       <HowItWorks/>
+      <Gallery/>
     </>
   );
 }
