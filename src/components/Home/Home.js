@@ -6,6 +6,7 @@ import Header from "./Header/Header";
 import Opportunities from "./Opportunities/Opportunities";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import Gallery from "../Gallery/Gallery";
+import Testimonials from "./Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Opportunities/>
       <HowItWorks/>
       <Gallery/>
+      <Testimonials/>
     </>
   );
 }

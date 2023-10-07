@@ -46,29 +46,30 @@ export default function Gallery() {
           </Text>
         </Button>
       </Flex>
-      <Grid
-        h="200px"
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(3, 1fr)"
-        gap={4}
-        px={20}
-      >
-        <GridItem colSpan={1} borderRadius={"10px"}>
-          <Image src={gallery1} alt="gallery 1" />
-        </GridItem>
-        <GridItem colSpan={1} borderRadius={"10px"}>
-          <Image src={gallery1} alt="gallery 1" />
-        </GridItem>
-        <GridItem colSpan={1} borderRadius={"10px"}>
-          <Image src={gallery1} alt="gallery 1" />
-        </GridItem>
-        <GridItem colSpan={2} borderRadius={"10px"}>
-          <Image src={gallery2} alt="gallery 2" />
-        </GridItem>
-        <GridItem colSpan={1} borderRadius={"10px"}>
-          <Image src={gallery3} alt="gallery 3" />
-        </GridItem>
-      </Grid>
+      <Box>
+        <Grid
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(3, 1fr)"
+          gap={4}
+          px={20}
+        >
+          <GridItem colSpan={1} borderRadius={"10px"}>
+            <Image src={gallery1} alt="gallery 1" />
+          </GridItem>
+          <GridItem colSpan={1} borderRadius={"10px"}>
+            <Image src={gallery1} alt="gallery 1" />
+          </GridItem>
+          <GridItem colSpan={1} borderRadius={"10px"}>
+            <Image src={gallery1} alt="gallery 1" />
+          </GridItem>
+          <GridItem colSpan={2} borderRadius={"10px"}>
+            <Image src={gallery2} alt="gallery 2" />
+          </GridItem>
+          <GridItem colSpan={1} borderRadius={"10px"}>
+            <Image src={gallery3} alt="gallery 3" />
+          </GridItem>
+        </Grid>
+      </Box>
     </Box>
   );
 }
