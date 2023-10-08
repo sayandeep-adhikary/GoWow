@@ -47,7 +47,7 @@ export default function NgoCard() {
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
       variant="elevated"
-      my={5}
+      py={5}
     >
       <Image
         w={"full"}

@@ -12,7 +12,7 @@ export default function Ngo() {
       <TopNav/>
       <BottomNav/>
       <Box px={20} py={5} bg={'#F7F6FD'} className={styles.container}>
-        <div className="row my-5">
+        <div className="row py-5">
             <div className="col-sm-12 col-lg-6">
                 <NgoCard/>
             </div>
@@ -44,7 +44,7 @@ export default function Ngo() {
                 <NgoCard/>
             </div>
         </div>
-        <div className="row my-5">
+        <div className="row py-5">
             <div className="col-sm-12 col-lg-6">
                 <NgoCard/>
             </div>
