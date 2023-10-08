@@ -1,11 +1,9 @@
 import React from "react";
-// import styles from "./Gallery.module.css";
+import styles from "./Gallery.module.css";
 import {
   Box,
   Button,
   Flex,
-  Grid,
-  GridItem,
   Image,
   Text,
 } from "@chakra-ui/react";
@@ -16,7 +14,12 @@ import gallery3 from "../../assets/gallery3.png";
 export default function Gallery() {
   return (
     <Box bg={"#F7F6FD"} id="gallery">
-      <Flex alignItems={"end"} justifyContent={"space-between"} px={20} pb={10}>
+      <Flex
+        alignItems={"end"}
+        justifyContent={"space-between"}
+        px={20}
+        className={styles.headingContainer}
+      >
         <Text
           mb={0}
           fontFamily={"'Poppins', sans-serif"}
@@ -46,29 +49,27 @@ export default function Gallery() {
           </Text>
         </Button>
       </Flex>
-      <Box>
-        <Grid
-          templateRows="repeat(2, 1fr)"
-          templateColumns="repeat(3, 1fr)"
-          gap={4}
-          px={20}
-        >
-          <GridItem colSpan={1} borderRadius={"10px"}>
+      <Box px={20} py={10} className={`${styles.container} container-fluid`}>
+        <div className="row">
+          <div className="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center mt-3">
             <Image src={gallery1} alt="gallery 1" />
-          </GridItem>
-          <GridItem colSpan={1} borderRadius={"10px"}>
+          </div>
+          <div className="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center mt-3">
             <Image src={gallery1} alt="gallery 1" />
-          </GridItem>
-          <GridItem colSpan={1} borderRadius={"10px"}>
+          </div>
+          <div className="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center mt-3">
             <Image src={gallery1} alt="gallery 1" />
-          </GridItem>
-          <GridItem colSpan={2} borderRadius={"10px"}>
+          </div>
+        </div>
+        <div className="row my-3">
+          <div className="col-sm-12 col-lg-8 d-flex align-items-center justify-content-center">
             <Image src={gallery2} alt="gallery 2" />
-          </GridItem>
-          <GridItem colSpan={1} borderRadius={"10px"}>
+          </div>
+          <div className="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center my-3">
             <Image src={gallery3} alt="gallery 3" />
-          </GridItem>
-        </Grid>
+          </div>
+
+        </div>
       </Box>
     </Box>
   );

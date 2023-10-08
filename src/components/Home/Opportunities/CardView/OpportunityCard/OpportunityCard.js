@@ -19,7 +19,7 @@ import opportunityImg from "../../../../../assets/opportunityImg.png";
 
 export default function OpportunityCard() {
   return (
-    <Card maxW="lg" my={5} borderRadius={"2xl"} fontSize={"0.8rem"} boxShadow={'0 0 5px grey'}>
+    <Card maxW="xl" my={5} borderRadius={"2xl"} fontSize={"0.8rem"} boxShadow={'0 0 5px grey'}>
       <CardHeader pb={0} px={3}>
         <Flex spacing="4">
           <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">

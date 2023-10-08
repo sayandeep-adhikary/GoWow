@@ -19,6 +19,7 @@ export default function HIWCard({ count, heading, text }) {
       pos={"relative"}
       boxShadow={"0 0 2px grey"}
       my={10}
+      borderRadius={'10px'}
     >
       <Image src={ellipse} w={"7rem"} pos={"absolute"} top={"-3.5rem"} />
       <Text

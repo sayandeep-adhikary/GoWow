@@ -23,7 +23,7 @@ export default function ToggleButton(props) {
     return left;
   }
   return (
-    <Flex mb={"2rem"} pl={20} alignItems={"center"} justifyContent={"start"}>
+    <Flex mb={"2rem"} pl={20} alignItems={"center"} justifyContent={"start"} className={styles.container}>
       <ButtonGroup
         isAttached
         variant="outline"

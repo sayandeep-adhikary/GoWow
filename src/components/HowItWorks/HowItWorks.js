@@ -12,16 +12,17 @@ export default function HowItWorks() {
         <Text
           mb={0}
           fontFamily={"'Poppins', sans-serif"}
-          fontSize={"2rem"}
+          fontSize={"1.6rem"}
           style={{ borderBottom: "3px solid #5B4899" }}
+          className={styles.hiwText}
         >
           How It Works ?
         </Text>
       </Flex>
-      <Container py={10}>
+      <Container mx={'auto'} py={9}>
         <HIWToggleBtn setShowView={setShowView} />
       </Container>
-      <Box px={20}>
+      <Box px={20} className={styles.container}>
         <div className="row">
           <div className="col-sm-12 col-lg-4">
             <HIWCard

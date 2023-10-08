@@ -13,9 +13,9 @@ import CardView from "./CardView/CardView";
 import CalendarView from "./CalendarView/CalendarView";
 
 export default function Opportunities() {
-  const [showView, setShowView]= useState('card')
+  const [showView, setShowView] = useState("card");
   return (
-    <Box pos={"relative"} bg={'#F7F6FD'}>
+    <Box pos={"relative"} bg={"#F7F6FD"}>
       <Flex
         justifyContent={"center"}
         pos={"absolute"}
@@ -25,8 +25,8 @@ export default function Opportunities() {
         <Card icon={NGOIcon} count={324} text={"NGOs"} />
         <Card icon={businessIcon} count={324} text={"Businesses"} />
       </Flex>
-      <Box pt="40">
-        <Flex alignItems={"end"} justifyContent={"space-between"} px={20}>
+      <Box pt="40" className={styles.container}>
+        <Flex alignItems={"end"} justifyContent={"space-between"} px={20} className={styles.opportunityHeadingContainer}>
           <Text
             mb={0}
             fontFamily={"'Poppins', sans-serif"}
@@ -58,75 +58,121 @@ export default function Opportunities() {
         </Flex>
       </Box>
       <Box>
-        <Flex justifyContent={'space-evenly'} alignItems={'center'} py={20}>
+        <Flex justifyContent={"space-evenly"} alignItems={"center"} py={20}>
           <Box
-            className="card"
+            className={`card ${styles.opportunityTypebtn}`}
             style={{
               width: "15rem",
               cursor: "pointer",
-              border: '1px solid #5B4899'
+              border: "1px solid #5B4899",
             }}
             _hover={{
-              bg: 'color.1',
-              color: 'white',
+              bg: "color.1",
+              color: "white",
             }}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
           >
-            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+            <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>
-                <BsHeartPulse color="#5B4899" size={30}/>
+                <BsHeartPulse
+                  color="#5B4899"
+                  size={"3vw"}
+                  className={styles.icon}
+                />
               </Box>
-              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+              <Text
+                className={`card-title ${styles.opportunityTypeText}`}
+                fontSize={"1.5rem"}
+                mb={0}
+                fontWeight={600}
+              >
                 {"Life Saving"}
               </Text>
             </Flex>
           </Box>
           <Box
-            className="card"
+            className={`card ${styles.opportunityTypebtn}`}
             style={{
               width: "15rem",
               cursor: "pointer",
-              border: '1px solid #5B4899'
+              border: "1px solid #5B4899",
             }}
             _hover={{
-              bg: 'color.1',
-              color: 'white',
+              bg: "color.1",
+              color: "white",
             }}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
           >
-            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+            <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>
-                <PiGraduationCap color="#5B4899" size={30}/>
+                <PiGraduationCap
+                  color="#5B4899"
+                  size={"3vw"}
+                  className={styles.icon}
+                />
               </Box>
-              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+              <Text
+                className={`card-title ${styles.opportunityTypeText}`}
+                fontSize={"1.5rem"}
+                mb={0}
+                fontWeight={600}
+              >
                 {"Material"}
               </Text>
             </Flex>
           </Box>
           <Box
-            className="card"
+            className={`card ${styles.opportunityTypebtn}`}
             style={{
               width: "15rem",
               cursor: "pointer",
-              border: '1px solid #5B4899'
+              border: "1px solid #5B4899",
             }}
             _hover={{
-              bg: 'color.1',
-              color: 'white',
+              bg: "color.1",
+              color: "white",
             }}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
           >
-            <Flex alignItems={'center'} justifyContent={'space-around'} py={3}>
+            <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>
-                <GoPeople color="#5B4899" size={30}/>
+                <GoPeople
+                  color="#5B4899"
+                  size={"3vw"}
+                  className={styles.icon}
+                />
               </Box>
-              <Text className="card-title" fontSize={"1.5rem"} mb={0} fontWeight={600}>
+              <Text
+                className={`card-title ${styles.opportunityTypeText}`}
+                fontSize={"1.5rem"}
+                mb={0}
+                fontWeight={600}
+              >
                 {"Volunteers"}
               </Text>
             </Flex>
           </Box>
         </Flex>
       </Box>
-      <ToggleButton setShowView={setShowView}/>
-      {showView === 'card' ? <CardView/> : <CalendarView/>}
-      <Text textAlign={"center"} color={'color.1'} py={5} mb={0} fontWeight={600} letterSpacing={'1px'} cursor={'pointer'}>See More</Text>
+      <ToggleButton setShowView={setShowView} />
+      {showView === "card" ? <CardView /> : <CalendarView />}
+      <Text
+        textAlign={"center"}
+        color={"color.1"}
+        py={5}
+        mb={0}
+        fontWeight={600}
+        letterSpacing={"1px"}
+        cursor={"pointer"}
+      >
+        See More
+      </Text>
     </Box>
   );
 }

@@ -12,12 +12,14 @@ export default function Downloads() {
         justifyContent={"space-between"}
         px={20}
         flexDir={"column"}
+        className={styles.container}
       >
         <Text
           mb={0}
           fontFamily={"'Poppins', sans-serif"}
           fontSize={"2rem"}
           style={{ borderBottom: "3px solid #5B4899" }}
+          className={styles.downloadText1}
         >
           Download The App Now !
         </Text>
@@ -27,6 +29,7 @@ export default function Downloads() {
             fontFamily={"'Montserrat', sans-serif"}
             fontSize={"1rem"}
             lineHeight={"1.8rem"}
+            className={styles.downloadText2}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing <br /> elit. Sit
             non neque orci amet, amet .

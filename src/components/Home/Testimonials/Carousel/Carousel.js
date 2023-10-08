@@ -27,39 +27,14 @@ export default function Carousel() {
                           src={testimonial1}
                         />
                     </div>
-                    <div className="col-md-4 mb-3">
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
                         <img
                           className="img-fluid"
                           alt="100%x280"
                           src={testimonial2}
                         />
                     </div>
-                    <div className="col-md-4 mb-3">
-                        <img
-                          className="img-fluid"
-                          alt="100%x280"
-                          src={testimonial2}
-                        />
-                    </div>
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="row">
-                    <div className="col-md-4 mb-3">
-                        <img
-                          className="img-fluid"
-                          alt="100%x280"
-                          src={testimonial1}
-                        />
-                    </div>
-                    <div className="col-md-4 mb-3">
-                        <img
-                          className="img-fluid"
-                          alt="100%x280"
-                          src={testimonial2}
-                        />
-                    </div>
-                    <div className="col-md-4 mb-3">
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
                         <img
                           className="img-fluid"
                           alt="100%x280"
@@ -77,14 +52,39 @@ export default function Carousel() {
                           src={testimonial1}
                         />
                     </div>
-                    <div className="col-md-4 mb-3">
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
                         <img
                           className="img-fluid"
                           alt="100%x280"
                           src={testimonial2}
                         />
                     </div>
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
+                        <img
+                          className="img-fluid"
+                          alt="100%x280"
+                          src={testimonial2}
+                        />
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="row">
                     <div className="col-md-4 mb-3">
+                        <img
+                          className="img-fluid"
+                          alt="100%x280"
+                          src={testimonial1}
+                        />
+                    </div>
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
+                        <img
+                          className="img-fluid"
+                          alt="100%x280"
+                          src={testimonial2}
+                        />
+                    </div>
+                    <div className={`col-md-4 mb-3 ${styles.testimonialCard}`}>
                         <img
                           className="img-fluid"
                           alt="100%x280"
@@ -96,7 +96,7 @@ export default function Carousel() {
               </div>
               <Box>
                 <button
-                  className="carousel-control-prev"
+                  className={`carousel-control-prev ${styles.slideBtn1}`}
                   type="button"
                   data-target="#carouselExampleIndicators2"
                   data-slide="prev"
@@ -111,7 +111,7 @@ export default function Carousel() {
                   <span className="sr-only">Previous</span>
                 </button>
                 <button
-                  className="carousel-control-next"
+                  className={`carousel-control-next ${styles.slideBtn2}`}
                   type="button"
                   data-target="#carouselExampleIndicators2"
                   data-slide="next"

@@ -1,0 +1,11 @@
+@media (width < 500px){
+    .testimonialCard {
+        display: none !important;
+    }
+    .slideBtn1 {
+        left: 0 !important;
+    }
+    .slideBtn2 {
+        right: 0 !important;
+    }
+}

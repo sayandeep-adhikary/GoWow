@@ -8,11 +8,13 @@ import {
   MenuList,
   MenuItem,
   useColorModeValue,
+  Badge,
 } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styles from "./BottomNav.module.css";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Links = ["Home", "About Us", "NGO", "Get Wow", "Be Wow"];
 
@@ -49,7 +51,12 @@ const NavLinks = (props) => {
 export default function BottomNav() {
   return (
     <>
-      <Box bg={useColorModeValue("color.1", "color.1")} color={"white"} px={4}>
+      <Box
+        bg={useColorModeValue("color.1", "color.1")}
+        color={"white"}
+        px={4}
+        display={{ base: "none", md: "block" }}
+      >
         <Flex h={14} alignItems={"center"}>
           <HStack spacing={8} alignItems={"center"} mx={"auto"}>
             <HStack
@@ -117,9 +124,15 @@ export default function BottomNav() {
                     style={{ margin: "0 auto" }}
                   />
                 </MenuButton>
-                <MenuList color={"black"} borderRadius={15}>
-                  <MenuItem>My Opportunities</MenuItem>
-                  <MenuItem>Link 2</MenuItem>
+                <MenuList color={"black"} borderRadius={13}>
+                  <MenuItem>
+                    <Link to={"/myopportunites"}>
+                      My Opportunities
+                      <Badge variant="solid" bg={'#5B4899'} borderRadius={'full'} ml={10}>
+                        34
+                      </Badge>
+                    </Link>
+                  </MenuItem>
                 </MenuList>
               </Menu>
             </Flex>

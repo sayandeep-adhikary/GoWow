@@ -6,3 +6,17 @@
     padding: 10px;
     border-radius: 50%;
 }
+.icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+}
+@media (width < 500px){
+    .container {
+        width: 14rem !important;
+    }
+    .countText {
+        font-size: 1.4rem !important;
+    }
+}

@@ -1,0 +1,8 @@
+@media (width < 500px){
+    .headingContainer {
+      padding: 0 0.7rem !important;
+    }
+    .container {
+        padding: 0 0.7rem !important;
+    }
+  }

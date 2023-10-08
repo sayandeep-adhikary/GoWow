@@ -5,7 +5,7 @@ import aboutImg from "../../assets/aboutImg.png";
 import { Box, Image, Text } from "@chakra-ui/react";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import Footer from "../Footer/Footer";
-import Testimonials from "../Home/Testimonials/Testimonials";
+import styles from './About.module.css'
 
 
 export default function About() {
@@ -13,17 +13,17 @@ export default function About() {
     <>
       <TopNav />
       <BottomNav />
-      <Box className="py-5" bg={'#F7F6FD'} px={20}>
+      <Box className={`py-5 ${styles.container}`} bg={'#F7F6FD'} px={20}>
         <div className="row">
-          <div className="col-sm-12 col-lg-6 d-flex flex-column align-items-start justify-content-start">
+          <div className="col-sm-12 col-lg-6 d-flex flex-column align-items-start ">
             <Text
               fontSize={"2rem"}
               borderBottom={"3px solid #5B4899"}
-              letterSpacing={"1px"}
+              letterSpacing={"1px"} className={styles.text1}
             >
               About GoWow!!
             </Text>
-            <Text fontSize={"1rem"} mt={5} pr={10} color={'3C3C3C'} lineHeight={'2rem'}>
+            <Text fontSize={"1rem"} mt={5} pr={10} color={'3C3C3C'} lineHeight={'2rem'} className={styles.text2}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Parturient lorem purus justo, ultricies. Sollicitudin odio
               elementum urna placerat lacus, vulputate. Non malesuada viverra et

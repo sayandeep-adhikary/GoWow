@@ -1,0 +1,12 @@
+@media (width < 500px){
+    .container {
+        padding: 0 0.7rem !important;
+        text-align: center !important;
+    }
+    .text1 {
+        margin: 1rem auto;
+    }
+    .text2 {
+        padding-right: 0 !important;
+    }
+}
