@@ -66,7 +66,7 @@ export default function TopNav() {
       <Box bg={useColorModeValue("white", "white")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
-            size={"sm"}
+            size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
