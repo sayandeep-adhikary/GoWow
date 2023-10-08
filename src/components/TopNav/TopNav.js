@@ -63,16 +63,8 @@ export default function TopNav() {
 
   return (
     <>
-      <Box bg={useColorModeValue("white", "white")} px={4}>
+      <Box bg={useColorModeValue("white", "white")} px={10} className={styles.container}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <IconButton
-            size={"md"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-            bg={"white"}
-          />
           {/* <HStack spacing={80} alignItems={"center"}> */}
           <Box>
             <Link to={"/home"}>
@@ -165,6 +157,14 @@ export default function TopNav() {
               Get In Touch
             </Button>
           </Flex>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+            bg={"white"}
+          />
         </Flex>
 
         {isOpen ? (

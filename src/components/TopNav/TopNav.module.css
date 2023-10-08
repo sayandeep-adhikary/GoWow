@@ -7,3 +7,8 @@
     text-decoration: none !important;
     background: none !important;
 }
+@media (width < 500px){
+    .container {
+        padding: 0 !important;
+    }
+}
