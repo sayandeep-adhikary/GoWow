@@ -15,7 +15,7 @@ export default function About() {
       <BottomNav />
       <Box className={`py-5 ${styles.container}`} bg={'#F7F6FD'} px={20}>
         <div className="row">
-          <div className="col-sm-12 col-lg-6 d-flex flex-column align-items-start ">
+          <div className={`col-sm-12 col-lg-6 d-flex flex-column align-items-start ${styles.textCol}`}>
             <Text
               fontSize={"2rem"}
               borderBottom={"3px solid #5B4899"}
@@ -37,7 +37,7 @@ export default function About() {
               Enim diam id.
             </Text>
           </div>
-          <div className="col-sm-12 col-lg-6 d-flex align-items-center justify-content-center">
+          <div className={`col-sm-12 col-lg-6 d-flex align-items-center justify-content-center mt-5 mb-4 ${styles.imgCol}`}>
             <Image
               src={aboutImg}
               alt="about"

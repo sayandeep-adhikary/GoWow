@@ -9,4 +9,10 @@
     .text2 {
         padding-right: 0 !important;
     }
+    .imgCol {
+        order: 1 !important;
+    }
+    .textCol {
+        order: 2 !important;
+    }
 }
