@@ -8,14 +8,21 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import styles from "./Footer.module.css";
 import logo from "../../assets/logoLg.png";
+import { Link } from "react-router-dom";
 
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg={'white'}
+      bg={"white"}
       rounded={"full"}
       w={8}
       h={8}
@@ -54,34 +61,26 @@ export default function Footer() {
           <Image src={logo} alt="gowow logo" my={5} />
         </a>
         <Stack direction={"row"} spacing={6}>
-          <Box
-            as="a"
-            href={"#"}
-            _hover={{ color: "inherit", textDecor: "none" }}
-          >
-            Home
-          </Box>
-          <Box
-            as="a"
-            href={"#"}
-            _hover={{ color: "inherit", textDecor: "none" }}
-          >
-            NGO
-          </Box>
-          <Box
-            as="a"
-            href={"#"}
-            _hover={{ color: "inherit", textDecor: "none" }}
-          >
-            Get Wow
-          </Box>
-          <Box
-            as="a"
-            href={"#"}
-            _hover={{ color: "inherit", textDecor: "none" }}
-          >
-            Be Wow
-          </Box>
+          <Link to={"/home"} className={styles.linkItem}>
+            <Box _hover={{ color: "inherit", textDecor: "none" }}>
+              Home
+            </Box>
+          </Link>
+          <Link to={"/ngo"} className={styles.linkItem}>
+            <Box _hover={{ color: "inherit", textDecor: "none" }}>
+              NGO
+            </Box>
+          </Link>
+          <Link to={"/getwow"} className={styles.linkItem}>
+            <Box _hover={{ color: "inherit", textDecor: "none" }}>
+              Get Wow
+            </Box>
+          </Link>
+          <Link to={"/bewow"} className={styles.linkItem}>
+            <Box _hover={{ color: "inherit", textDecor: "none" }}>
+              Be Wow
+            </Box>
+          </Link>
         </Stack>
         <Container
           as={Stack}
@@ -94,19 +93,19 @@ export default function Footer() {
         >
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube color="#5B4899"/>
+              <FaYoutube color="#5B4899" />
             </SocialButton>
             <SocialButton label={"FaceBook"} href={"#"}>
-              <FaFacebookF color="#5B4899"/>
+              <FaFacebookF color="#5B4899" />
             </SocialButton>
             <SocialButton label={"LinkedIn"} href={"#"}>
-              <FaLinkedinIn color="#5B4899"/>
+              <FaLinkedinIn color="#5B4899" />
             </SocialButton>
             <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter color="#5B4899"/>
+              <FaTwitter color="#5B4899" />
             </SocialButton>
             <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram color="#5B4899"/>
+              <FaInstagram color="#5B4899" />
             </SocialButton>
           </Stack>
         </Container>
@@ -117,7 +116,7 @@ export default function Footer() {
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.700")}
         py={5}
-        textAlign={'center'}
+        textAlign={"center"}
       >
         <Text mb={0}>© Copyright Satyam Studio</Text>
       </Box>

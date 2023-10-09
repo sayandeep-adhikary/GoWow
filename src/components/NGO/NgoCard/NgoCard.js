@@ -63,7 +63,7 @@ export default function NgoCard() {
             Shree Ram Nirashrit Mahila EVM Bal Asharam
           </Text>
           <HStack justifyContent={"flex-start"} alignItems={"center"}>
-            <SocialButton label={"YouTube"} href={"#"}>
+            <SocialButton label={"location"}>
               <SlLocationPin color="#E8711F" />
             </SocialButton>
             <Text fontSize={"0.7rem"} mb={0} ml={3} fontWeight={600}>
@@ -77,7 +77,7 @@ export default function NgoCard() {
                 alignItems={"center"}
                 py="5"
               >
-                <SocialButton label={"YouTube"} href={"#"}>
+                <SocialButton label={"call"}>
                   <FiPhoneCall color="#E8711F" />
                 </SocialButton>
                 <Text fontSize={"0.7rem"} mb={0} ml={3} fontWeight={600}>

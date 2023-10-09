@@ -6,6 +6,7 @@ import NGORegistration from "./components/NGORegistration/NGORegistration";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Ngo from "./components/NGO/Ngo";
+import OpportunityDetails from "./components/OpportunityDetails/OpportunityDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="home" element={<Home/>}/>
         <Route exact path="aboutus" element={<About/>}/>
         <Route exact path="ngo" element={<Ngo/>}/>
+        <Route exact path="opportunitydetail" element={<OpportunityDetails/>}/>
       </Routes>
     </div>
   );

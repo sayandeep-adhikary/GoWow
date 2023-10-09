@@ -1,0 +1,13 @@
+@media (width < 500px){
+    .container {
+        padding: 0 0.7rem !important;
+    }
+    .buttonContainer {
+        justify-content: flex-start !important;
+    }
+}
+.btnContainer {
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

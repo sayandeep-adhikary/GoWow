@@ -16,10 +16,17 @@ import { SlLike } from "react-icons/sl";
 import { BsChat } from "react-icons/bs";
 import NGOLogo from "../../../../../assets/NGOLogo.png";
 import opportunityImg from "../../../../../assets/opportunityImg.png";
+import { Link } from "react-router-dom";
 
 export default function OpportunityCard() {
   return (
-    <Card maxW="xl" my={5} borderRadius={"2xl"} fontSize={"0.8rem"} boxShadow={'0 0 5px grey'}>
+    <Card
+      maxW="xl"
+      my={5}
+      borderRadius={"2xl"}
+      fontSize={"0.8rem"}
+      boxShadow={"0 0 5px grey"}
+    >
       <CardHeader pb={0} px={3}>
         <Flex spacing="4">
           <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -47,7 +54,7 @@ export default function OpportunityCard() {
       <CardFooter justify="space-between" py={5} flex>
         <Box display={"flex"} gap={5}>
           <Flex px={0} alignItems={"center"} gap={2} fontWeight={"600"}>
-            <SlLike size={20} color="#5B4899" cursor={"pointer"}/>
+            <SlLike size={20} color="#5B4899" cursor={"pointer"} />
             <Text mb={0}>4.5K</Text>
           </Flex>
           <Flex px={0} alignItems={"center"} gap={2} fontWeight={"600"}>
@@ -77,29 +84,31 @@ export default function OpportunityCard() {
               Share
             </Text>
           </Button>
-          <Button
-            color={"white"}
-            bg={"color.1"}
-            _hover={{
-              bg: "white",
-              border: "1px solid #5B4899",
-              color: "#5B4899",
-            }}
-            variant={"outline"}
-            style={{ letterSpacing: "1px" }}
-            h={8}
-            w={"4rem"}
-          >
-            <Text
-              fontFamily={"'Poppins', sans-serif"}
-              mb={0}
-              letterSpacing={"1px"}
-              fontWeight={600}
-              fontSize={"0.8rem"}
+          <Link to="/opportunitydetail">
+            <Button
+              color={"white"}
+              bg={"color.1"}
+              _hover={{
+                bg: "white",
+                border: "1px solid #5B4899",
+                color: "#5B4899",
+              }}
+              variant={"outline"}
+              style={{ letterSpacing: "1px" }}
+              h={8}
+              w={"4rem"}
             >
-              Grab
-            </Text>
-          </Button>
+              <Text
+                fontFamily={"'Poppins', sans-serif"}
+                mb={0}
+                letterSpacing={"1px"}
+                fontWeight={600}
+                fontSize={"0.8rem"}
+              >
+                Grab
+              </Text>
+            </Button>
+          </Link>
         </Box>
       </CardFooter>
     </Card>

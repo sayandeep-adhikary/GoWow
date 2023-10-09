@@ -126,7 +126,7 @@ export default function BottomNav() {
                 </MenuButton>
                 <MenuList color={"black"} borderRadius={13}>
                   <MenuItem>
-                    <Link to={"/myopportunites"}>
+                    <Link to={"/myopportunites"} className={styles.linkItem}>
                       My Opportunities
                       <Badge variant="solid" bg={'#5B4899'} borderRadius={'full'} ml={10}>
                         34
