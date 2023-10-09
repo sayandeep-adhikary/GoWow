@@ -28,6 +28,17 @@ export default function CardView() {
           <OpportunityCard />
         </div>
       </div>
+      <Text
+        textAlign={"center"}
+        color={"color.1"}
+        py={5}
+        mb={0}
+        fontWeight={600}
+        letterSpacing={"1px"}
+        cursor={"pointer"}
+      >
+        See More
+      </Text>
     </div>
   );
 }
