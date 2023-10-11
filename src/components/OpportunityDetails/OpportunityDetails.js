@@ -116,9 +116,6 @@ const AfterConfirm = ({ onClose }) => {
         mx={"auto"}
         w={"50%"}
       />
-      <Text fontWeight={600} fontSize={"1.5rem"}>
-        Confirm Grab ?
-      </Text>
       <Text fontWeight={600} fontSize={"0.7rem"} align={'center'}>
       You have Successfully grabbed the opportunity.Please perform it by the mentioned date and then Mark it as complete from my opportunities’page.
       </Text>

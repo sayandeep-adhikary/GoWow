@@ -63,7 +63,7 @@ export default function TopNav() {
 
   return (
     <>
-      <Box bg={useColorModeValue("white", "white")} px={10} className={styles.container}>
+      <Box bg={useColorModeValue("white", "white")} px={10} className={styles.container} id="topnav">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           {/* <HStack spacing={80} alignItems={"center"}> */}
           <Box>

@@ -7,6 +7,8 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Ngo from "./components/NGO/Ngo";
 import OpportunityDetails from "./components/OpportunityDetails/OpportunityDetails";
+import MyOpportunites from "./components/MyOpportunites/MyOpportunites";
+import Getwow from "./components/Getwow/Getwow";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route exact path="aboutus" element={<About/>}/>
         <Route exact path="ngo" element={<Ngo/>}/>
         <Route exact path="opportunitydetail" element={<OpportunityDetails/>}/>
+        <Route exact path="myopportunites" element={<MyOpportunites/>}/>
+        <Route exact path="getwow" element={<Getwow/>}/>
       </Routes>
     </div>
   );
