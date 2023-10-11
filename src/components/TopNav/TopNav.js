@@ -63,7 +63,12 @@ export default function TopNav() {
 
   return (
     <>
-      <Box bg={useColorModeValue("white", "white")} px={10} className={styles.container} id="topnav">
+      <Box
+        bg={useColorModeValue("white", "white")}
+        px={10}
+        className={styles.container}
+        id="topnav"
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           {/* <HStack spacing={80} alignItems={"center"}> */}
           <Box>
@@ -120,28 +125,14 @@ export default function TopNav() {
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
             </Menu>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Avatar
-                  size={"sm"}
-                  src={
-                    "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                  }
-                />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+            <Link to="/bewow">
+              <Avatar
+                size={"sm"}
+                src={
+                  "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+                }
+              />
+            </Link>
             <Button
               bg={"color.1"}
               borderColor={"color.1"}
@@ -224,25 +215,27 @@ export default function TopNav() {
                     Gallery
                   </Box>
                 </NavHashLink>
-                <NavLink
-                  className={styles.linkItem}
-                  to={`/myopportunites`}
-                >
+                <NavLink className={styles.linkItem} to={`/myopportunites`}>
                   <Box
                     px={2}
                     py={"0.8rem"}
                     rounded={"md"}
                     _hover={{
                       textDecoration: "none",
-                      bg: 'white',
+                      bg: "white",
                     }}
                     className={styles.navItems}
-                    id='myOpportunites'
+                    id="myOpportunites"
                   >
                     My Opportunites
-                    <Badge variant="solid" bg={'#5B4899'} borderRadius={'full'} ml={2}>
-                        34
-                      </Badge>
+                    <Badge
+                      variant="solid"
+                      bg={"#5B4899"}
+                      borderRadius={"full"}
+                      ml={2}
+                    >
+                      34
+                    </Badge>
                   </Box>
                 </NavLink>
               </Stack>
