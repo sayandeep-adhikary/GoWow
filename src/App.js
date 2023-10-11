@@ -9,6 +9,7 @@ import Ngo from "./components/NGO/Ngo";
 import OpportunityDetails from "./components/OpportunityDetails/OpportunityDetails";
 import MyOpportunites from "./components/MyOpportunites/MyOpportunites";
 import Getwow from "./components/Getwow/Getwow";
+import Bewow from "./components/Bewow/Bewow";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="opportunitydetail" element={<OpportunityDetails/>}/>
         <Route exact path="myopportunites" element={<MyOpportunites/>}/>
         <Route exact path="getwow" element={<Getwow/>}/>
+        <Route exact path="bewow" element={<Bewow/>}/>
       </Routes>
     </div>
   );

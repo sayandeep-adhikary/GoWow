@@ -1,0 +1,35 @@
+@media (width < 500px){
+    .rankContainer {
+        justify-content: center !important;
+    }
+    .container {
+        min-height: 10rem !important;
+        max-width: 20rem !important;
+    }
+    .pointContainer {
+        bottom: -6rem;
+        left: 0 !important;
+    }
+    .coinContainer {
+        bottom: -7rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .levelContainer {
+        bottom: -6rem;
+        right: 0 !important;
+    }
+}
+.pointContainer {
+    bottom: -6rem;
+    left: 10%;
+}
+.coinContainer {
+    bottom: -7rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.levelContainer {
+    bottom: -6rem;
+    right: 10%;
+}
