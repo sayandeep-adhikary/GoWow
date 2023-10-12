@@ -96,7 +96,7 @@ export default function TopNav() {
           </HStack>
           {/* </HStack> */}
           <Flex alignItems={"center"}>
-            <Menu>
+            {/* <Menu>
               <MenuButton
                 as={Button}
                 rounded={"full"}
@@ -104,19 +104,7 @@ export default function TopNav() {
                 cursor={"pointer"}
                 minW={0}
               >
-                <Box
-                  mx={5}
-                  w={"30px"}
-                  h={"30px"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  borderRadius={"full"}
-                  boxShadow={"1.5px 1.5px 5px grey"}
-                  cursor={"pointer"}
-                >
-                  <VscBellDot size={20} />
-                </Box>
+                
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
@@ -124,7 +112,22 @@ export default function TopNav() {
                 <MenuDivider />
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
+            <Link to="/notifications" style={{color: 'inherit', marginRight: '10%'}}>
+              <Box
+                // mx={5}
+                w={"30px"}
+                h={"30px"}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"full"}
+                boxShadow={"1.5px 1.5px 5px grey"}
+                cursor={"pointer"}
+              >
+                <VscBellDot size={20} />
+              </Box>
+            </Link>
             <Link to="/bewow">
               <Avatar
                 size={"sm"}

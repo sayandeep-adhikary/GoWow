@@ -10,6 +10,7 @@ import OpportunityDetails from "./components/OpportunityDetails/OpportunityDetai
 import MyOpportunites from "./components/MyOpportunites/MyOpportunites";
 import Getwow from "./components/Getwow/Getwow";
 import Bewow from "./components/Bewow/Bewow";
+import Notifications from "./components/Notifications/Notifications";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="myopportunites" element={<MyOpportunites/>}/>
         <Route exact path="getwow" element={<Getwow/>}/>
         <Route exact path="bewow" element={<Bewow/>}/>
+        <Route exact path="notifications" element={<Notifications/>}/>
       </Routes>
     </div>
   );
