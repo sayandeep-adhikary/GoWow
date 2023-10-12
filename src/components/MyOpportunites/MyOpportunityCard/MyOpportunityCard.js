@@ -17,7 +17,7 @@ import NGOLogo from "../../../assets/NGOLogo.png";
 import opportunityImg from "../../../assets/opportunityImg.png";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 
-export default function MyOpportunityCard() {
+export default function MyOpportunityCard({ isUser }) {
   const [like, setLike] = useState(false);
   return (
     <Card
@@ -76,29 +76,55 @@ export default function MyOpportunityCard() {
             <Text mb={0}>150</Text>
           </Flex>
         </Box>
-        <Button
-          color={"white"}
-          bg={"color.1"}
-          _hover={{
-            bg: "white",
-            border: "1px solid #5B4899",
-            color: "#5B4899",
-          }}
-          variant={"outline"}
-          style={{ letterSpacing: "1px" }}
-          h={8}
-          w={"6rem"}
-        >
-          <Text
-            fontFamily={"'Poppins', sans-serif"}
-            mb={0}
-            letterSpacing={"1px"}
-            fontWeight={600}
-            fontSize={"0.8rem"}
+        {isUser ? (
+          <Button
+            color={"white"}
+            bg={"color.1"}
+            _hover={{
+              bg: "white",
+              border: "1px solid #5B4899",
+              color: "#5B4899",
+            }}
+            variant={"outline"}
+            style={{ letterSpacing: "1px" }}
+            h={8}
+            w={"6rem"}
           >
-            Complete
-          </Text>
-        </Button>
+            <Text
+              fontFamily={"'Poppins', sans-serif"}
+              mb={0}
+              letterSpacing={"1px"}
+              fontWeight={600}
+              fontSize={"0.8rem"}
+            >
+              Complete
+            </Text>
+          </Button>
+        ) : (
+          <Button
+            color={"color.1"}
+            bg={"white"}
+            border={"1px solid #5B4899"}
+            _hover={{
+              bg: "color.1",
+              color: "white",
+            }}
+            variant={"outline"}
+            style={{ letterSpacing: "1px" }}
+            h={8}
+            w={"6rem"}
+          >
+            <Text
+              fontFamily={"'Poppins', sans-serif"}
+              mb={0}
+              letterSpacing={"1px"}
+              fontWeight={600}
+              fontSize={"0.8rem"}
+            >
+              Share
+            </Text>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

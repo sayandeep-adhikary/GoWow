@@ -58,7 +58,7 @@ const NavLinks = (props) => {
 
 const Links = ["Home", "About Us", "NGO", "Get Wow", "Be Wow"];
 
-export default function TopNav() {
+export default function TopNav({isUser}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -230,7 +230,7 @@ export default function TopNav() {
                     className={styles.navItems}
                     id="myOpportunites"
                   >
-                    My Opportunites
+                    {isUser ? "My Opportunites" : "My Upload Opportunites"}
                     <Badge
                       variant="solid"
                       bg={"#5B4899"}

@@ -25,8 +25,9 @@ import businessIcon from "../../assets/businessIcon.png";
 import donateIcon from "../../assets/donateIcon.png";
 import styles from "./Login.module.css";
 
-export default function Login() {
+export default function Login({setIsUser}) {
   const selectRoleModal = useDisclosure();
+  const selectRoleLogin = useDisclosure();
   return (
     <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"color.1"}>
       <Stack spacing={8} mx={"auto"} maxW={"lg"} minW={"35vw"}>
@@ -63,6 +64,7 @@ export default function Login() {
                 to="/home"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
+              </Link>
                 <Button
                   type="submit"
                   bg={"color.1"}
@@ -74,10 +76,10 @@ export default function Login() {
                   style={{ letterSpacing: "1px" }}
                   className={styles.loginBtn}
                   minW={'100%'}
+                  onClick={selectRoleLogin.onOpen}
                 >
                   Log in
                 </Button>
-              </Link>
               <a
                 href="https://varlyq.com"
                 target="_blank"
@@ -206,6 +208,76 @@ export default function Login() {
                   </Text>
                   <Text mb={0} fontSize={"0.8rem"} pr={10} color={"color.3"}>
                     Register as an NGO to provide apportunities to everyone.
+                  </Text>
+                </Stack>
+              </HStack>
+            </Link>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+      {/* Select Role Login */}
+      <Modal
+        isOpen={selectRoleLogin.isOpen}
+        onClose={selectRoleLogin.onClose}
+        isCentered
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader align="center">
+            <Text my={5}>Select Role to Login</Text>
+            <Text fontSize={"1.5rem"} color={"color.1"}>
+              Welcome Again to GoWow!!
+            </Text>
+            <Text px={8} fontSize={"1rem"} color={"color.3"} fontWeight={400}>
+              Please let us Know How you want to change the world.
+            </Text>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Link
+              to="/home"
+              style={{ textDecoration: "none", color: "inherit" }}
+              onClick={()=>setIsUser(true)}
+            >
+              <HStack
+                spacing={5}
+                align={"center"}
+                className={styles.modalItem}
+                cursor={"pointer"}
+              >
+                <Box className={styles.modalIcon}>
+                  <Image src={userIcon} alt="user icon" w={30} />
+                </Box>
+                <Stack spacing={0}>
+                  <Text mb={0} fontWeight={900}>
+                    User ( Donor/Volunteer )
+                  </Text>
+                  <Text mb={0} fontSize={"0.8rem"} pr={10} color={"color.3"}>
+                    Login as a user to help, donate or volunteer for others.
+                  </Text>
+                </Stack>
+              </HStack>
+            </Link>
+            <Link
+              to="/home"
+              style={{ textDecoration: "none", color: "inherit" }}
+              onClick={()=>setIsUser(false)}
+            >
+              <HStack
+                spacing={5}
+                align={"center"}
+                className={styles.modalItem}
+                cursor={"pointer"}
+              >
+                <Box className={styles.modalIcon}>
+                  <Image src={donateIcon} alt="user icon" w={30} />
+                </Box>
+                <Stack spacing={0}>
+                  <Text mb={0} fontWeight={900}>
+                    NGO
+                  </Text>
+                  <Text mb={0} fontSize={"0.8rem"} pr={10} color={"color.3"}>
+                    Login as an NGO to provide apportunities to everyone.
                   </Text>
                 </Stack>
               </HStack>

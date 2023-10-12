@@ -11,8 +11,9 @@ import { GoPeople } from "react-icons/go";
 import ToggleButton from "../../ToggleButton/ToggleButton";
 import CardView from "./CardView/CardView";
 import CalendarView from "./CalendarView/CalendarView";
+import {MdAddCircle} from 'react-icons/md'
 
-export default function Opportunities() {
+export default function Opportunities({ isUser }) {
   const [showView, setShowView] = useState("card");
   return (
     <Box pos={"relative"} bg={"#F7F6FD"}>
@@ -26,7 +27,71 @@ export default function Opportunities() {
         <Card icon={businessIcon} count={324} text={"Businesses"} />
       </Flex>
       <Box pt="40" className={styles.container}>
-        <Flex alignItems={"end"} justifyContent={"space-between"} px={20} className={styles.opportunityHeadingContainer}>
+        <div className="container">
+          <div className="row">
+            <div className={`col-sm-12 col-lg-6 d-flex align-items-center justify-content-start my-3 ${styles.textContainer}`}>
+              <Text
+                mb={0}
+                fontFamily={"'Poppins', sans-serif"}
+                fontSize={"2rem"}
+                style={{ borderBottom: "3px solid #5B4899" }}
+              >
+                Opportunities
+              </Text>
+            </div>
+            <div className="col-sm-12 col-lg-6 d-flex align-items-center justify-content-end my-3">
+              <Flex gap={3}>
+                {isUser === false && <Button
+                leftIcon={<MdAddCircle size={25}/>}
+                  borderRadius={"10px"}
+                  bg={"color.1"}
+                  color={"white"}
+                  w={210}
+                  _hover={{
+                    bg: "white",
+                    border: "1px solid #5B4899",
+                    color: "#5B4899",
+                  }}
+                >
+                  <Text
+                    fontFamily={"'Poppins', sans-serif"}
+                    mb={0}
+                    letterSpacing={"1px"}
+                    fontWeight={400}
+                  >
+                    Add Opportinity
+                  </Text>
+                </Button>}
+                <Button
+                  borderRadius={"10px"}
+                  bg={"color.1"}
+                  color={"white"}
+                  w={125}
+                  _hover={{
+                    bg: "white",
+                    border: "1px solid #5B4899",
+                    color: "#5B4899",
+                  }}
+                >
+                  <Text
+                    fontFamily={"'Poppins', sans-serif"}
+                    mb={0}
+                    letterSpacing={"1px"}
+                    fontWeight={400}
+                  >
+                    View All
+                  </Text>
+                </Button>
+              </Flex>
+            </div>
+          </div>
+        </div>
+        {/* <Flex
+          alignItems={"end"}
+          justifyContent={"space-between"}
+          px={20}
+          className={styles.opportunityHeadingContainer}
+        >
           <Text
             mb={0}
             fontFamily={"'Poppins', sans-serif"}
@@ -55,7 +120,7 @@ export default function Opportunities() {
               View All
             </Text>
           </Button>
-        </Flex>
+        </Flex> */}
       </Box>
       <Box>
         <Flex justifyContent={"space-evenly"} alignItems={"center"} py={20}>
@@ -70,9 +135,9 @@ export default function Opportunities() {
               bg: "color.1",
               color: "white",
             }}
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'center'}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
           >
             <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>
@@ -103,9 +168,9 @@ export default function Opportunities() {
               bg: "color.1",
               color: "white",
             }}
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'center'}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
           >
             <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>
@@ -136,9 +201,9 @@ export default function Opportunities() {
               bg: "color.1",
               color: "white",
             }}
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'center'}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
           >
             <Flex alignItems={"center"} justifyContent={"space-around"} py={3}>
               <Box className={styles.modalIcon}>

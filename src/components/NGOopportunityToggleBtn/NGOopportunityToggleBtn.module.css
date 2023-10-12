@@ -1,0 +1,39 @@
+@media (width < 500px) {
+    .container {
+      scale: 0.8 !important;
+      padding-left: 0 !important;
+      margin-left: 1.5rem !important;
+    }
+  }
+  .buttonContainer {
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  .leftBtn,
+  .rightBtn {
+    font-size: 1.1rem !important;
+    letter-spacing: 1px !important;
+    font-family: "Poppins", sans-serif;
+    border: 0 !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    position: relative;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  .leftBtn:hover,
+  .rightBtn:hover {
+    background-color: transparent !important;
+  }
+  .btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 10rem;
+    height: 100%;
+    background: #5b4899;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  

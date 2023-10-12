@@ -48,7 +48,7 @@ const NavLinks = (props) => {
   );
 };
 
-export default function BottomNav() {
+export default function BottomNav({isUser}) {
   return (
     <>
       <Box
@@ -127,7 +127,7 @@ export default function BottomNav() {
                 <MenuList color={"black"} borderRadius={13}>
                   <MenuItem>
                     <Link to={"/myopportunites"} className={styles.linkItem}>
-                      My Opportunities
+                      {isUser ? "My Opportunities" : "My Upload Opportunities"}
                       <Badge variant="solid" bg={'#5B4899'} borderRadius={'full'} ml={10}>
                         34
                       </Badge>

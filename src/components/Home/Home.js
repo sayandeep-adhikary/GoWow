@@ -10,13 +10,13 @@ import Testimonials from "./Testimonials/Testimonials";
 import Downloads from "./Downloads/Downloads";
 import Footer from "../Footer/Footer";
 
-export default function Home() {
+export default function Home({isUser}) {
   return (
     <>
-      <TopNav />
-      <BottomNav />
+      <TopNav isUser={isUser}/>
+      <BottomNav isUser={isUser}/>
       <Header/>
-      <Opportunities/>
+      <Opportunities isUser={isUser}/>
       <HowItWorks/>
       <Gallery/>
       <Testimonials/>
