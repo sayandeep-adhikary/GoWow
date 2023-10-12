@@ -12,6 +12,7 @@ import Getwow from "./components/Getwow/Getwow";
 import Bewow from "./components/Bewow/Bewow";
 import Notifications from "./components/Notifications/Notifications";
 import { useState } from "react";
+import AddOpportunity from "./components/AddOpportunity/AddOpportunity";
 
 function App() {
   const [isUser, setIsUser] = useState(true)
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="getwow" element={<Getwow/>}/>
         <Route exact path="bewow" element={<Bewow/>}/>
         <Route exact path="notifications" element={<Notifications/>}/>
+        <Route exact path="addopportunity" element={<AddOpportunity/>}/>
       </Routes>
     </div>
   );

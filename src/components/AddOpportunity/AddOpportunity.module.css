@@ -1,0 +1,22 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.crossIcon {
+    position: absolute;
+    right: -1.5rem;
+}
+.createBtn:hover {
+    border: 1px solid #5B4899;
+}
+.backBtn {
+    position: absolute;
+    left: -1.5rem;
+}
+@media (width < 500px){
+    .formContainer {
+        width: 100% !important;
+    }
+}

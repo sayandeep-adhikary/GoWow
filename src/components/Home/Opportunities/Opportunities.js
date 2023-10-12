@@ -11,7 +11,8 @@ import { GoPeople } from "react-icons/go";
 import ToggleButton from "../../ToggleButton/ToggleButton";
 import CardView from "./CardView/CardView";
 import CalendarView from "./CalendarView/CalendarView";
-import {MdAddCircle} from 'react-icons/md'
+import { MdAddCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Opportunities({ isUser }) {
   const [showView, setShowView] = useState("card");
@@ -29,7 +30,9 @@ export default function Opportunities({ isUser }) {
       <Box pt="40" className={styles.container}>
         <div className="container">
           <div className="row">
-            <div className={`col-sm-12 col-lg-6 d-flex align-items-center justify-content-start my-3 ${styles.textContainer}`}>
+            <div
+              className={`col-sm-12 col-lg-6 d-flex align-items-center justify-content-start my-3 ${styles.textContainer}`}
+            >
               <Text
                 mb={0}
                 fontFamily={"'Poppins', sans-serif"}
@@ -41,27 +44,31 @@ export default function Opportunities({ isUser }) {
             </div>
             <div className="col-sm-12 col-lg-6 d-flex align-items-center justify-content-end my-3">
               <Flex gap={3}>
-                {isUser === false && <Button
-                leftIcon={<MdAddCircle size={25}/>}
-                  borderRadius={"10px"}
-                  bg={"color.1"}
-                  color={"white"}
-                  w={210}
-                  _hover={{
-                    bg: "white",
-                    border: "1px solid #5B4899",
-                    color: "#5B4899",
-                  }}
-                >
-                  <Text
-                    fontFamily={"'Poppins', sans-serif"}
-                    mb={0}
-                    letterSpacing={"1px"}
-                    fontWeight={400}
-                  >
-                    Add Opportinity
-                  </Text>
-                </Button>}
+                {isUser === false && (
+                  <Link to="/addopportunity">
+                    <Button
+                      leftIcon={<MdAddCircle size={25} />}
+                      borderRadius={"10px"}
+                      bg={"color.1"}
+                      color={"white"}
+                      w={210}
+                      _hover={{
+                        bg: "white",
+                        border: "1px solid #5B4899",
+                        color: "#5B4899",
+                      }}
+                    >
+                      <Text
+                        fontFamily={"'Poppins', sans-serif"}
+                        mb={0}
+                        letterSpacing={"1px"}
+                        fontWeight={400}
+                      >
+                        Add Opportinity
+                      </Text>
+                    </Button>
+                  </Link>
+                )}
                 <Button
                   borderRadius={"10px"}
                   bg={"color.1"}
