@@ -13,6 +13,9 @@ import Bewow from "./components/Bewow/Bewow";
 import Notifications from "./components/Notifications/Notifications";
 import { useState } from "react";
 import AddOpportunity from "./components/AddOpportunity/AddOpportunity";
+import LifeSaving from "./components/LifeSaving/LifeSaving";
+import Volunteers from "./components/Volunteers/Volunteers";
+import Material from "./components/Material/Material";
 
 function App() {
   const [isUser, setIsUser] = useState(true)
@@ -32,6 +35,9 @@ function App() {
         <Route exact path="bewow" element={<Bewow/>}/>
         <Route exact path="notifications" element={<Notifications/>}/>
         <Route exact path="addopportunity" element={<AddOpportunity/>}/>
+        <Route exact path="lifesaving" element={<LifeSaving/>}/>
+        <Route exact path="volunteers" element={<Volunteers/>}/>
+        <Route exact path="material" element={<Material/>}/>
       </Routes>
     </div>
   );

@@ -18,6 +18,18 @@ import { BsArrowLeftCircle } from "react-icons/bs";
 export default function AddOpportunity() {
   const [type, setType] = useState(null);
   const navigate = useNavigate();
+  const getOpportunityType = (type) => {
+    switch (type) {
+      case "life saving":
+        return "/lifesaving";
+      case "material":
+        return "/material";
+      case "volunteer":
+        return "/volunteers";
+      default:
+        break;
+    }
+  };
 
   return (
     <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"color.1"}>
@@ -75,14 +87,19 @@ export default function AddOpportunity() {
                   className="card"
                   borderRadius={"lg"}
                   cursor={"pointer"}
-                  bg={type === 'life saving' ? "rgba(216, 210, 255, 0.2)" :"#F6F6F6"}
+                  bg={
+                    type === "life saving"
+                      ? "rgba(216, 210, 255, 0.2)"
+                      : "#F6F6F6"
+                  }
                   _hover={{ bg: "rgba(216, 210, 255, 0.2)" }}
                   px={5}
                   fontWeight={600}
                   letterSpacing={"1px"}
                   my={5}
+                  py={4}
                   onClick={() => setType("life saving")}
-                  border={'none'}
+                  border={"none"}
                 >
                   <Flex justifyContent={"space-between"}>
                     <label
@@ -107,14 +124,17 @@ export default function AddOpportunity() {
                   className="card"
                   borderRadius={"lg"}
                   cursor={"pointer"}
-                  bg={type === 'material' ? "rgba(216, 210, 255, 0.2)" :"#F6F6F6"}
+                  bg={
+                    type === "material" ? "rgba(216, 210, 255, 0.2)" : "#F6F6F6"
+                  }
                   _hover={{ bg: "rgba(216, 210, 255, 0.2)" }}
                   px={5}
                   fontWeight={600}
                   letterSpacing={"1px"}
                   my={5}
+                  py={4}
                   onClick={() => setType("material")}
-                  border={'none'}
+                  border={"none"}
                 >
                   <Flex justifyContent={"space-between"}>
                     <label
@@ -139,14 +159,19 @@ export default function AddOpportunity() {
                   className="card"
                   borderRadius={"lg"}
                   cursor={"pointer"}
-                  bg={type === 'volunteer' ? "rgba(216, 210, 255, 0.2)" :"#F6F6F6"}
+                  bg={
+                    type === "volunteer"
+                      ? "rgba(216, 210, 255, 0.2)"
+                      : "#F6F6F6"
+                  }
                   _hover={{ bg: "rgba(216, 210, 255, 0.2)" }}
                   px={5}
                   fontWeight={600}
                   letterSpacing={"1px"}
                   my={5}
+                  py={4}
                   onClick={() => setType("volunteer")}
-                  border={'none'}
+                  border={"none"}
                 >
                   <Flex justifyContent={"space-between"}>
                     <label
@@ -181,6 +206,8 @@ export default function AddOpportunity() {
               style={{ letterSpacing: "1px" }}
               className={styles.createBtn}
               mt={10}
+              w={"100%"}
+              onClick={()=>navigate(getOpportunityType(type))}
             >
               Next
             </Button>

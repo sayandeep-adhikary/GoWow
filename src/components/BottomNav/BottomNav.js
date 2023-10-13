@@ -125,9 +125,9 @@ export default function BottomNav({isUser}) {
                   />
                 </MenuButton>
                 <MenuList color={"black"} borderRadius={13}>
-                  <MenuItem>
+                  <MenuItem onClick={()=>console.log(isUser)}>
                     <Link to={"/myopportunites"} className={styles.linkItem}>
-                      {isUser ? "My Opportunities" : "My Upload Opportunities"}
+                      {isUser === true ? "My Opportunities" : "My Upload Opportunities"}
                       <Badge variant="solid" bg={'#5B4899'} borderRadius={'full'} ml={10}>
                         34
                       </Badge>

@@ -12,8 +12,8 @@ export default function MyOpportunites({ isUser }) {
   const [showView, setShowView] = useState("card");
   return (
     <>
-      <TopNav />
-      <BottomNav />
+      <TopNav isUser={isUser} />
+      <BottomNav isUser={isUser}/>
       <Flex pt={10} alignItems={"center"} justifyContent={"center"}>
         {isUser ? (
           <OpportunityToggleBtn setShowView={setShowView} />
