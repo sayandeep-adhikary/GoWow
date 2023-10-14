@@ -10,6 +10,7 @@ import coin from "../../assets/coin.png";
 import level from "../../assets/level.png";
 import PeopleCard from "./PeopleCard/PeopleCard";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 export default function Bewow() {
   return (
@@ -84,11 +85,13 @@ export default function Bewow() {
             </div>
           </div>
         </div>
+        <Link to={'/topusers'} style={{color: 'inherit', textDecoration: 'none'}}>
         <Flex justifyContent={'center'} >
             <Button bg={'color.1'} color={'white'} letterSpacing={'1px'} _hover={{bg: 'white', color: '#5B4899', border: '1px solid #5B4899'}} >
                 View All LeaderBoard
             </Button>
         </Flex>
+        </Link>
       </Box>
       <Footer />
     </>

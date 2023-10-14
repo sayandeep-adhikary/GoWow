@@ -16,6 +16,7 @@ import AddOpportunity from "./components/AddOpportunity/AddOpportunity";
 import LifeSaving from "./components/LifeSaving/LifeSaving";
 import Volunteers from "./components/Volunteers/Volunteers";
 import Material from "./components/Material/Material";
+import TopUser from "./components/TopUser/TopUser";
 
 function App() {
   const [isUser, setIsUser] = useState(true)
@@ -32,12 +33,13 @@ function App() {
         <Route exact path="opportunitydetail" element={<OpportunityDetails/>}/>
         <Route exact path="myopportunites" element={<MyOpportunites isUser={isUser}/>}/>
         <Route exact path="getwow" element={<Getwow/>}/>
-        <Route exact path="bewow" element={<Bewow/>}/>
+        <Route exact path="bewow" element={<Bewow />}/>
         <Route exact path="notifications" element={<Notifications/>}/>
         <Route exact path="addopportunity" element={<AddOpportunity/>}/>
         <Route exact path="lifesaving" element={<LifeSaving/>}/>
         <Route exact path="volunteers" element={<Volunteers/>}/>
         <Route exact path="material" element={<Material/>}/>
+        <Route exact path="topusers" element={<TopUser isUser={isUser}/>}/>
       </Routes>
     </div>
   );
